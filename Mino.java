@@ -76,6 +76,9 @@ public class Mino {
   public void moveDown(){
     this.move(0, 1, 0);
   }
+  public void moveUP(){
+    this.move(0, -1, 0);
+  }
   public void rotateRight(){
     this.move(1, 0, 0);
   }

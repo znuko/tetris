@@ -18,8 +18,8 @@ public class Minos {
         values[0][3] = new int[]{0, 1, 0, 0};
 
         values[1][0] = new int[]{0, 0, 0, 0};
-        values[1][1] = new int[]{0, 0, 0, 0};
-        values[1][2] = new int[]{1, 1, 1, 1};
+        values[1][1] = new int[]{1, 1, 1, 1};
+        values[1][2] = new int[]{0, 0, 0, 0};
         values[1][3] = new int[]{0, 0, 0, 0};
 
         for (int y = 0; y < Mino.size; y++){

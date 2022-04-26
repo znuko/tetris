@@ -147,13 +147,6 @@ public class GameControler implements KeyListener
     int minoX = mino.getPositionX();
     int[][] fieldValues = field.getValues();
 
-    if(
-      minoY < 0 || Field.height < minoY ||
-      minoX < 0 || Field.width < minoX
-    ){
-      return true;
-    }
-
     for(int y = 0; y < Mino.size; y++){
       for(int x = 0; x < Mino.size; x++){
         if (minoValues[y][x] == 1 && fieldValues[minoY + y][minoX + x] != 0){

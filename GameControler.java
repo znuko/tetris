@@ -62,6 +62,14 @@ public class GameControler implements KeyListener
           newMino.moveDown();
           isTryMoveDown = true;
           break;
+        case KeyEvent.VK_UP:
+          do {
+            this.mino.setPositionY(newMino.getPositionY());
+            this.mino.setPositionX(newMino.getPositionX());
+            newMino.moveDown();
+          } while (!checkHit(newMino, this.field));
+          isTryMoveDown = true;
+          break;
         case KeyEvent.VK_P:
           newMino.rotateRight();
           break;
@@ -69,6 +77,10 @@ public class GameControler implements KeyListener
           newMino.rotateLeft();
           break;
       }
+
+      this.field.setMino(this.mino);
+      this.clear();
+      this.print("ミノの数：" + Integer.toString(this.minoNum));
 
       if (!checkHit(newMino, this.field)){
         this.mino.setPositionY(newMino.getPositionY());
@@ -134,6 +146,13 @@ public class GameControler implements KeyListener
     int minoY = mino.getPositionY();
     int minoX = mino.getPositionX();
     int[][] fieldValues = field.getValues();
+
+    if(
+      minoY < 0 || Field.height < minoY ||
+      minoX < 0 || Field.width < minoX
+    ){
+      return true;
+    }
 
     for(int y = 0; y < Mino.size; y++){
       for(int x = 0; x < Mino.size; x++){

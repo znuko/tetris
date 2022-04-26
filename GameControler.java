@@ -96,7 +96,7 @@ public class GameControler implements KeyListener
           this.order = this.getOrder();
         }
         mino.setValues(Minos.getType(this.order[this.orderIndex]));
-        if (checkHit(mino, this.field)){
+        if (checkHit(this.mino, this.field)){
           this.status = 2;
         }
       }

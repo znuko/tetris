@@ -1,7 +1,7 @@
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-public class KeyListenerExample implements KeyListener
+public class GameControler implements KeyListener
 {
   public int status;
 
@@ -13,7 +13,7 @@ public class KeyListenerExample implements KeyListener
   int orderIndex;
 
   // コンストラクタ
-  KeyListenerExample()
+  GameControler()
   {
     System.out.printf("\n\n\tPress Enter to Start\n\n");
     this.status = 0;

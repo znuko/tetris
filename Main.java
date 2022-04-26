@@ -2,7 +2,7 @@ import java.awt.FlowLayout;
 import java.awt.Frame;
 import java.awt.Label;
 
-public class Test {
+public class Main {
   public static void main(String[] args)
   {
     //Setting the frame and labels
@@ -15,7 +15,7 @@ public class Test {
     f.setVisible(true);
     
     //Creating and adding the key listener
-    KeyListenerExample k = new KeyListenerExample();
+    GameControler k = new GameControler();
     f.addKeyListener(k);
   }
 }

@@ -1,4 +1,11 @@
-# メモ
+# Tetris
+
+build:
+
+```sh
+javac Main.java
+java Main
+```
 
 
 ## 参考
